@@ -1,0 +1,5 @@
+project: interledger-rs
+target: address
+
+cmds:
+    - cmd: /address
