@@ -1,0 +1,5 @@
+project: interledger-rs
+target: packet
+
+cmds:
+    - cmd: /packet

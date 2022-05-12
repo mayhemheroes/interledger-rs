@@ -1,0 +1,5 @@
+project: interledger-rs
+target: stream_packet
+
+cmds:
+    - cmd: /stream_packet
