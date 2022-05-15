@@ -52,21 +52,21 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.PACKET_MAYHEMFILE }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.PACKET_MAYHEMFILE }} --duration 300
           sarif-output: sarif
 
       - name: Start analysis for address
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.ADDRESS_MAYHEMFILE }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.ADDRESS_MAYHEMFILE }} --duration 300
           sarif-output: sarif
 
       - name: Start analysis for stream_packet
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.STREAM_PACKET_MAYHEMFILE }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.STREAM_PACKET_MAYHEMFILE }} --duration 300
           sarif-output: sarif
 
       - name: Upload SARIF file(s)
